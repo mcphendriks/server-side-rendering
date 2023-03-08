@@ -1,3 +1,42 @@
 <%- include('./partials/head') %>
+    <!-- Stekjes in een foreach loop -->
+    <% stekjes.forEach(stekjes=> { %>
+        <article class="leaf-cards" aria-label="Beschikbaar stekje">
+            <ol>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </ol>
 
-    <%- include('./partials/foot') %>
+            <img src="/" alt>
+            <div class="leaf-cards-content">
+                <h2>
+                    <%= stekjes.naam %>
+                </h2>
+                <p>
+                    <%= stekjes.aanmelddatum %>
+                </p>
+                <p>hagasgasgasgas</p>
+                <button>Reserveer</button>
+            </div>
+
+
+        </article>
+        <% }) %>
+
+            </main>
+            <section class="filter-menu">
+                <ul>
+                    <li><a href="" aria-label="Makkelijke verzoring"></a></li>
+                    <li><a href="" aria-label="Moeilijke verzorging"></a></li>
+                    <li><a href="" aria-label="Makkelijke verzoring"></a></li>
+                    <li><a href="" aria-label="Makkelijke verzoring"></a></li>
+                </ul>
+
+
+
+            </section>
+            <%- include('./partials/foot') %>

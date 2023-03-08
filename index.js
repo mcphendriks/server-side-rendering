@@ -8,19 +8,19 @@ const app = express();
 // De URL haalt gegevens op van de REST API en fetch gegevens op van de opgegeven URL en stuurt deze als JSON en wijst het resultaat toe aan de variabele "data".
 const url = "https://api.buurtcampus-oost.fdnd.nl/api/v1/stekjes";
 const data = await fetch(url).then((response) => response.json());
+console.log(data);
 
-// Stel ejs in als template engine en geef de 'views' map door
+// Stel in hoe ejs te gebruiken ejs, geef de 'views' map door
 app.set("view engine", "ejs");
 app.set("views", "./views");
 // console.log(set);
 
-// Gebruik de map 'public' voor statische resources
-app.use(express.static("public"));
-// console.log(url, data);
+// Gebruik de map 'public' voor statische resources | set up public folder
+app.use(express.static("./public"));
+// console.log(use);
 
 //  Maak een route voor de index
 app.get("/", function (req, res) {
-  // res.send('Hello World!')
   res.render("index", data);
 });
 
