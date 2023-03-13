@@ -25,7 +25,6 @@ header {
 
 header nav {
   display: flex;
-  justify-content: center;
   justify-content: space-between;
 }
 
