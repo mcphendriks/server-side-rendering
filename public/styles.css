@@ -1,8 +1,7 @@
 :root {
-  --color-main: #56704a;
-  --color-button: #d5dbd2;
-  --color-text: #d5dbd2;
-  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --primary-color: #56704a;
+  --background-color: #d5dbd2;
+  --border-radius-btn: 1em;
 }
 
 * {
@@ -17,9 +16,9 @@ h2 {
 }
 
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow: scroll;
   background-color: #d5dbd2;
-  font-family: var(--font-family);
 
   /* Navigation bar */
 }
@@ -41,70 +40,42 @@ header nav {
   width: 8em;
 }
 
-.nav-link ul {
+.nav-links ul {
   display: flex;
+  list-style: none;
+  padding: 0;
 }
 
-.nav-link li {
-  list-style: none;
+.nav-links li {
   padding: 1em;
 }
 
-.nav-link li:last-child {
-  background-color: #56704a;
-  border-radius: 1em;
+.nav-links li:last-child {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-btn);
 }
 
-.nav-link li a {
+.nav-links a {
   text-decoration: none;
   color: #56704a;
   font-weight: 600;
 }
 
-.content-img {
-  margin-top: 15em;
-  z-index: -1;
-  animation-name: moving;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  filter: drop-shadow(0 0 0.75rem rgb(120, 133, 123));
-}
-
-@keyframes moving {
-  0% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(5deg);
-  }
-}
-
-.introduction img {
-  width: 40em;
-}
-
-/* MOBILE VERSION */
-.toggle-button {
-  position: absolute;
-  top: 1.75rem;
-  right: 1rem;
+/* MOBILE VERSION  */
+/* .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  top: 1.75rem;
+  right: 1rem;
   width: 50px;
+  background: transparent;
+  border: none;
   aspect-ratio: 1/1;
-}
+} */
 svg {
-  color: #56704a;
-}
-
-.toggle-button span {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
+  color: var(--primary-color);
 }
 
 /* Intro section */
@@ -148,8 +119,29 @@ svg {
   font-size: 42px;
 }
 
-/* .introduction p {
-} */
+.content-img {
+  margin-top: 15em;
+  z-index: -1;
+  animation-name: moving;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  filter: drop-shadow(0 0 0.75rem rgb(120, 133, 123));
+}
+
+@keyframes moving {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.introduction img {
+  width: 40em;
+}
 
 /* Stekjes section  */
 
@@ -216,7 +208,7 @@ main {
   font-weight: 600;
 }
 
-/* card icons */
+/* CARD ICONS */
 .leaf-cards ul {
   position: absolute;
   right: 1em;
@@ -248,9 +240,8 @@ main {
   transform: translate(-7px, 4px);
   border-radius: 6px;
 }
-/* end card icons */
 
-/* SECTION PICK UP  */
+/* SECTION PICK UP INFORMATION  */
 
 .info-pick-up {
   width: 100%;
@@ -288,7 +279,6 @@ main {
   height: auto;
 }
 
-/* Breakpoint informatie pagina */
 @media screen and (max-width: 45em) {
   .info-content {
     grid-template-columns: repeat(1, 1fr);
