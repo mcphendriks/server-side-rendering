@@ -1,9 +1,9 @@
 :root {
   --primary-color: #56704a;
-  --background-color: #d5dbd2;
+  --background-color: #f0f4ee;
   --border-radius-btn: 1em;
   --homepage-btn-color: #56704a;
-  --homepage-btn-text-clr: #d5dbd2;
+  --homepage-btn-text-clr: #f0f4ee;
   --font-weight: 600;
 }
 
@@ -23,7 +23,7 @@ h2 {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow: scroll;
-  background-color: #d5dbd2;
+  background-color: var(--background-color);
 }
 
 h1 {
@@ -120,9 +120,6 @@ svg {
   color: var(--homepage-btn-text-clr);
   font-weight: var(--font-weight);
 }
-.homepage-intro-content button:hover {
-  background-color: #7f8a79;
-}
 
 .homepage-container-intro > h1,
 .homepage-container-intro > p {
@@ -199,16 +196,10 @@ svg {
   padding: 10px 40px;
   border-radius: 2em;
   background: #56704a;
-  color: #d5dbd2;
+  color: #f0f4ee;
   cursor: pointer;
   font-size: 0.75em;
   border: none;
-}
-
-.plant-card-content > button:hover {
-  border: 1px solid #56704a;
-  background-color: #7f8a79;
-  color: #56704a;
   font-weight: 600;
 }
 
@@ -230,7 +221,7 @@ svg {
 }
 
 .plant-card li {
-  background: #fff;
+  background: #f0f4ee;
   list-style: none;
   width: 40px;
   aspect-ratio: 1/1;
@@ -277,7 +268,7 @@ svg {
 }
 
 .homepage-info-list p {
-  color: #d5dbd2;
+  color: #f0f4ee;
   font-weight: 600;
   padding: 0 2em 0 1em;
   height: auto;
