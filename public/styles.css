@@ -2,9 +2,14 @@
   --primary-color: #56704a;
   --background-color: #d5dbd2;
   --border-radius-btn: 1em;
+  --homepage-btn-color: #56704a;
+  --homepage-btn-text-clr: #d5dbd2;
+  --font-weight: 600;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -19,9 +24,13 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow: scroll;
   background-color: #d5dbd2;
-
-  /* Navigation bar */
 }
+
+h1 {
+  font-size: 42px;
+}
+/* HOMEPAGE NAVIGATION MENU */
+
 header {
   width: 100%;
   height: auto;
@@ -29,7 +38,7 @@ header {
   position: fixed;
 }
 
-header nav {
+nav {
   padding-top: 1em;
   display: flex;
   justify-content: space-between;
@@ -58,7 +67,7 @@ header nav {
 .nav-links a {
   text-decoration: none;
   color: #56704a;
-  font-weight: 600;
+  font-weight: var(--font-weight);
 }
 
 /* MOBILE VERSION  */
@@ -78,55 +87,53 @@ svg {
   color: var(--primary-color);
 }
 
-/* Intro section */
+/* HOMEPAGE INTRO SECTION */
 
-.introduction {
-  width: 100%;
-  height: 100vh;
+.homepage-container-intro {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  min-height: 100vh;
+}
+.homepage-intro-img img {
+  width: 40em;
 }
 
-.introduction-content {
-  border: 1px solid green;
+.homepage-intro-content {
   text-align: center;
-  border: 2px solid yellow;
-  width: 50em;
+  max-width: 800px;
+  margin: 0 1em;
 }
 
-.introduction-content button {
+.homepage-intro-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.homepage-intro-content button {
   padding: 1em;
-  margin: 2em 0.5em 0 0.5em;
+  margin: 0 0.5em;
   border: none;
-  background-color: #56704a;
+  background-color: var(--homepage-btn-color);
   border-radius: 1em;
-  color: #d5dbd2;
+  color: var(--homepage-btn-text-clr);
+  font-weight: var(--font-weight);
 }
-.introduction-content button:hover {
-  border: 1px solid #56704a;
+.homepage-intro-content button:hover {
   background-color: #7f8a79;
-  font-weight: 600;
 }
 
-.introduction h1,
-.introduction p {
+.homepage-container-intro > h1,
+.homepage-container-intro > p {
   margin: 1em 0 0 0;
 }
 
-.introduction h1 {
-  font-size: 42px;
-}
-
-.content-img {
+.homepage-intro-img {
   margin-top: 15em;
   z-index: -1;
   animation-name: moving;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+  animation: moving 1s ease-in-out alternate infinite;
   filter: drop-shadow(0 0 0.75rem rgb(120, 133, 123));
 }
 
@@ -139,13 +146,9 @@ svg {
   }
 }
 
-.introduction img {
-  width: 40em;
-}
+/* HOMEPAGE PLANT SECTION  */
 
-/* Stekjes section  */
-
-main {
+.homepage-plant-container {
   margin: 0 1.5em;
   display: flex;
   flex-wrap: wrap;
@@ -154,26 +157,27 @@ main {
   --width-card: 20em;
 }
 
-.leaf-cards {
+.plant-card {
   position: relative;
   width: var(--width-card);
   aspect-ratio: 1/1.2;
   transition: all 0.25s ease;
   overflow: hidden;
   border-radius: 1em;
+  margin-bottom: 2em;
 }
 
-.leaf-cards:hover {
+.plant-card:hover {
   transform: scale(0.9);
   box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
 }
 
-.leaf-cards img {
+.plant-card > img {
   width: var(--width-card);
   aspect-ratio: 1/1.2;
 }
 
-.leaf-cards-content {
+.plant-card-content {
   width: 100%;
   position: absolute;
   padding: 1em;
@@ -186,11 +190,11 @@ main {
   opacity: 0.9;
 }
 
-.leaf-cards-content p {
+.plant-card-content p {
   font-size: 1em;
 }
 
-.leaf-cards-content button {
+.plant-card-content button {
   margin-top: 2em;
   padding: 10px 40px;
   border-radius: 2em;
@@ -201,7 +205,7 @@ main {
   border: none;
 }
 
-.leaf-cards-content button:hover {
+.plant-card-content > button:hover {
   border: 1px solid #56704a;
   background-color: #7f8a79;
   color: #56704a;
@@ -209,7 +213,7 @@ main {
 }
 
 /* CARD ICONS */
-.leaf-cards ul {
+.plant-card ul {
   position: absolute;
   right: 1em;
   display: flex;
@@ -220,12 +224,12 @@ main {
   transition: all 0.25s ease;
 }
 
-.leaf-cards:hover ul {
+.plant-card:hover ul {
   transform: translate(0);
   opacity: 1;
 }
 
-.leaf-cards li {
+.plant-card li {
   background: #fff;
   list-style: none;
   width: 40px;
@@ -235,7 +239,7 @@ main {
   backface-visibility: hidden;
 }
 
-.leaf-cards li:hover {
+.plant-card li:hover {
   opacity: 1;
   transform: translate(-7px, 4px);
   border-radius: 6px;
