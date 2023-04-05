@@ -3,6 +3,8 @@
 # Titel
 Ontwerp en ontwikkel een server-side website voor de Buurtcampus-oost opdrachtgever.
 
+
+
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
@@ -13,6 +15,21 @@ Ontwerp en ontwikkel een server-side website voor de Buurtcampus-oost opdrachtge
   * [Licentie](#licentie)
 
 ## Beschrijving
+
+**Desk-version** 
+
+<img width="1000" alt="Screenshot 2023-04-05 at 14 57 16" src="https://user-images.githubusercontent.com/106346778/230095708-e327b46f-55f4-451d-a8f3-0cfdc91fc396.png">
+
+<img width="400" alt="Screenshot 2023-04-05 at 14 57 30" src="https://user-images.githubusercontent.com/106346778/230095812-1872fb27-06f3-426c-a754-86cade9b5263.png"> <img width="400" alt="Screenshot 2023-04-05 at 14 57 50" src="https://user-images.githubusercontent.com/106346778/230096028-c6c56f98-27ea-48f9-ab39-602178d103b6.png">
+
+
+**Mobile-version**
+
+<img width="400" alt="Screenshot 2023-04-05 at 14 58 40" src="https://user-images.githubusercontent.com/106346778/230096061-13bb8327-ae50-4c49-92a3-2c8db729c007.png"> <img width="400" alt="Screenshot 2023-04-05 at 14 58 47" src="https://user-images.githubusercontent.com/106346778/230096131-8f6c0456-3de2-4d85-9baa-bc73e2c72027.png">
+
+
+
+
 Voor dit project heb ik een overzichtspagina gebouwd met Node, Express en EJS op de server en gebruik gemaakt van client-side technieken HTML, CSS of JS voor het responsive ontwerp, waarbij buurtbewoners uit Amsterdam-oost kunnen zien welke stekjes momenteel in de stekjes kast zitten, zodat bewoners kan overwegen een stekje om te ruilen. 
 
 
